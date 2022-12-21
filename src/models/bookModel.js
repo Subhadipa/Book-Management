@@ -18,7 +18,7 @@ const bookSchema = new mongoose.Schema({
         type: ObjectId,
         required: true,
         trim: true,
-        ref: "userModel_final_BM",
+        ref: "User Model",
     },
     ISBN: {
         type: String,
@@ -40,7 +40,7 @@ const bookSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
-    
+
     isDeleted: {
         type: Boolean,
         default: false
@@ -56,4 +56,4 @@ const bookSchema = new mongoose.Schema({
     { timestamps: true }
 )
 
-module.exports = mongoose.model('bookModel_final_BM', bookSchema)
+module.exports = mongoose.model('Book Model', bookSchema)

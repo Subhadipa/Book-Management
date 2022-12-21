@@ -8,7 +8,7 @@ const getUserDetails = async function (req, res, next) {
         if (!token) {
             return res.status(400).send({ status: false, message: 'You are not logged in, Please login to proceed your request' })
         }
-        let decodedToken = jwt.verify(token, "functionupridersprivatekey")
+        let decodedToken = jwt.verify(token, "subha")
         if (decodedToken) {
             req.userId = decodedToken.userId
             next();
