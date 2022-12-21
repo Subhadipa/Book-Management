@@ -204,21 +204,3 @@ const exportFunc = {
 }
 module.exports = exportFunc
 
-
-
-// const testBoookCount = async (req, res) => {
-//     try {
-//         let checkId = req.body.userId
-//         let totalCount = await bookModel.find({ userId: checkId }).count()
-//         let totalBook = await bookModel.find({ userId: checkId })
-//         if (totalCount) {
-//             res.send({message: "success", data: {total_Boooks: totalCount, books_Are: totalBook}})
-//         } else {
-//             res.send({message: "no boook find"})
-//         }
-//     }
-//     catch (err) {
-//         return res.status(500).send({ message: err.message });
-//     }
-// }
-// module.exports.testBoookCount = testBoookCount;
