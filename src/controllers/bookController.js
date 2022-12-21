@@ -101,15 +101,7 @@ const exportFunc = {
             if (!checkParams) {
                 return res.status(404).send({ status: false, msg: "There is no book exist with this id" });
             }
-            const reviewData = await reviewModel.find({ bookId: paramsId, isDeleted: false }).select({ bookId: 1, reviewedBy: 1, reviewedAt: 1, rating: 1, review: 1 }); ////////
-            //const response = { checkParams, reviewData }
-            //checkParams.reviewData=reviewData
-            //console.log(checkParams.reviewData)
-            /* response=
-               {
-                   checkParams,checkParams.reviewData
-                   
-               }*/
+            const reviewData = await reviewModel.find({ bookId: paramsId, isDeleted: false }).select({ bookId: 1, reviewedBy: 1, reviewedAt: 1, rating: 1, review: 1 }); 
             checkParams = checkParams.toObject()
             checkParams["reviewData"] = reviewData
             return res.status(200).send({ status: true, message: 'Books list', data: checkParams });
